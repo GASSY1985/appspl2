@@ -3,14 +3,14 @@
     .header__user
       .header__user__left
         .header__user__left__name
-          Gassy
+          = current_user.name
         .header__user__left__introduction
-          Hello programing
+          = current_user.user_introduction
       .header__user__right
         .header__user__right__img
           Pict
         .header__user__right__edit__icons
-          = link_to "#", class: "header__user__right__edit" do
+          = link_to edit_user_path(current_user), class: "header__user__right__edit" do
             = icon('fas', 'cog',class: "header__user__right__edit__btn") 
         .header__user__right__write__icons
           = link_to "#", class: "header__user__right__write" do
