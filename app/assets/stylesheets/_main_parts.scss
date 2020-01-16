@@ -1,0 +1,51 @@
+.blog{
+  height: 100vh;
+  width: calc(100vw - 750px);
+  float: left;
+  background-color: $geppaku;
+  color: $youkan;
+  &__header{
+    height: 100px;
+    border-bottom-color: #eeee;
+    display: flex;
+    padding: 10px;
+    &__info{
+      padding: 15px;
+      background-color: $unohana;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      &__title{
+        align-self: center;
+        font-size: 20pt;
+        font-weight: bold;
+      }
+      &__created_at{
+        font-size: 10pt;
+      }
+    }
+    &__edit{
+      margin-left: 10px;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: $konpeki;
+      font-weight: bold;
+      color: white;
+      font-size: 12pt;
+    }
+  }
+  &__contents{
+    height: calc(100vh - 100px);
+    border-bottom-color: #eeee;
+    padding: 15px;
+    font-size: 10pt;
+    display: flex;
+    &__text{
+      background-color: $unohana;
+      padding: 10px;
+      width: 100%;
+    }
+  }
+}
