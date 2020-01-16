@@ -29,7 +29,6 @@
         &__img{
           width: 60px;
           margin-right: 5px;
-          background-color: $geppaku;
           color: black;
         }
         &__edit{
@@ -46,6 +45,7 @@
   }
   .main{
     padding: 15px;
+    overflow: scroll;
     &__user-blogs{
       display: flex;
       justify-content: space-between;
