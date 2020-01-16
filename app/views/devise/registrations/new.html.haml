@@ -24,6 +24,11 @@
             = f.text_area :user_introduction
         .field
           .field-label
+            = f.label :your_avatar
+          .field-edit__your-avatar
+            = f.file_field :avatar
+        .field
+          .field-label
             = f.label :password
             %i (英数字8文字以上)
           .field-input
