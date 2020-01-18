@@ -68,6 +68,14 @@ gem 'mini_magick'
 gem 'pry-rails'
 gem 'fog-aws'
 
+gem 'bootstrap-sass'
+gem 'jquery-slick-rails' #slickjs
+gem 'dropzonejs-rails' #dropzone.js
+
+#Backend
+gem 'acts-as-taggable-on' #タグ付け
+gem 'kaminari' #ページネーション
+gem 'meta-tags' #SEO対策
 
 
 group :production do
