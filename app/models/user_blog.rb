@@ -1,0 +1,3 @@
+class UserBlog < ApplicationRecord
+
+end

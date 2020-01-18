@@ -49,13 +49,8 @@ GEM
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (9.0.0)
-    autoprefixer-rails (9.7.4)
-      execjs
     bcrypt (3.1.13)
     bindex (0.8.1)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
     builder (3.2.4)
     byebug (11.0.1)
     capistrano (3.11.2)
@@ -325,7 +320,6 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
-  bootstrap-sass
   byebug
   capistrano
   capistrano-bundler

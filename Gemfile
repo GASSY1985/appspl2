@@ -68,7 +68,6 @@ gem 'mini_magick'
 gem 'pry-rails'
 gem 'fog-aws'
 
-gem 'bootstrap-sass'
 gem 'jquery-slick-rails' #slickjs
 gem 'dropzonejs-rails' #dropzone.js
 
