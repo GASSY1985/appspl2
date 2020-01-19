@@ -32,13 +32,17 @@
           color: black;
         }
         &__edit{
+          &__btn{
           margin-right: 5px;
           text-decoration: none;
           color: whitesmoke;
+          }
         }
         &__write{
+          &__btn{
           text-decoration: none;
           color: whitesmoke;
+          }
         }
       }
     }
