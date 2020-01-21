@@ -1,0 +1,33 @@
+.write-blog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $tekkon;
+  .form{
+    display: flex;
+    color: $youkan;
+    .title{
+      background-color: $unohana;
+      .input-title{
+        width: 700px;
+        height: 70px;
+      }
+    }
+    .content{
+      background-color: $unohana;
+      padding: 5px 0;
+      .input-content{
+        width: 700px;
+        height: 500px;
+      }
+    }
+    .submit{
+      width: 700px;
+      height: 40px;
+      background-color: $konpeki;
+      color:white;
+    }
+  }
+}
