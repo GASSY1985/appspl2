@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_19_040816) do
+ActiveRecord::Schema.define(version: 2020_01_22_120140) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -42,21 +42,21 @@ ActiveRecord::Schema.define(version: 2020_01_19_040816) do
   end
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.string "img"
-    t.bigint "user_id"
-    t.bigint "chat_id"
+    t.string "message"
+    t.bigint "blog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_blogs_on_blog_id"
   end
 
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "message"
-    t.bigint "blog"
-    t.bigint "user"
+    t.string "title"
+    t.string "content"
+    t.string "img"
+    t.bigint "blog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_chats_on_blog_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,4 +75,6 @@ ActiveRecord::Schema.define(version: 2020_01_19_040816) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "blogs", "blogs"
+  add_foreign_key "chats", "blogs"
 end
