@@ -1,6 +1,4 @@
 class BlogsController < ApplicationController
-  before_action :authenticate_user!
-
   def index
   end
 
@@ -8,13 +6,13 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = @user.blogs.create(create_params)
+    Blog.create(create_params)
     redirect_to controller: :blogs, action: :index
   end
 
   private
   def create_params
-    params.require(:blog).permit(:title, :content, :img).merge(user_id: current_user.id)
+    params.require(:blog).permit(:title, :content).merge(user_id: current_user.id)
   end
 
   def show
