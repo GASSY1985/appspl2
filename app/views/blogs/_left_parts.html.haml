@@ -13,12 +13,12 @@
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog',class: "header__user__right__edit__btn") 
         .header__user__right__write
-          = link_to "#" do
+          = link_to new_blog_path(current_user) do
             = icon('fas', 'edit',class: "header__user__right__write__btn") 
   .main
     .main__user-blogs
-      -# -# - current_user.blogs.each do |blog|
-      -# .main__user-blogs__title
-      -#   = blog.title
-      -# .main__user-blogs__created_at
-      -#   = blog.created_at
+    - current_user.blogs.each do |blog|
+      .main__user-blogs__title
+        = blog.title
+      .main__user-blogs__created_at
+        = blog.created_at
