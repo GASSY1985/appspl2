@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_23_094856) do
+ActiveRecord::Schema.define(version: 2020_01_23_102729) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -42,7 +42,9 @@ ActiveRecord::Schema.define(version: 2020_01_23_094856) do
   end
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "message"
+    t.string "title"
+    t.string "content"
+    t.string "img"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -50,9 +52,7 @@ ActiveRecord::Schema.define(version: 2020_01_23_094856) do
   end
 
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.string "img"
+    t.string "message"
     t.bigint "blog_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -75,6 +75,6 @@ ActiveRecord::Schema.define(version: 2020_01_23_094856) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "blogs", "blogs", column: "user_id"
+  add_foreign_key "blogs", "users"
   add_foreign_key "chats", "blogs"
 end

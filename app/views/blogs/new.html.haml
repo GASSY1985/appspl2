@@ -1,8 +1,8 @@
 .write-blog
   .form
-    = form_with model: @blogs, local: true do |f|
+    = form_with model: @blog, local: true do |f|
       .title
         = f.text_field :title, class: 'input-title', placeholder: "title"
       .content
         = f.text_area :cotent, class: 'input-content', placeholder: "write a blog"
-      =f.submit 'UPLOAD', class: 'submit'
+      =f.submit 'submit', class: 'submit'
