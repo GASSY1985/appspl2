@@ -48,34 +48,18 @@
     }
   }
   .main{
-    padding: 15px;
     overflow: scroll;
     &__user-blogs{
-      display: flex;
-      justify-content: space-between;
-      height: 50px;
-      margin-bottom: 10px;
+      text-decoration: none;
+      margin: 40px 15px;      
       &__title{
         font-weight: bold;
+        color: whitesmoke;        
         align-self: center;
       }
       &__created_at{
+        color: whitesmoke;
         font-size: 10pt;
-        margin-top: 15px;
-      }
-    }
-    &__user-blogs2{
-      display: flex;
-      justify-content: space-between;
-      height: 70px;
-      margin-bottom: 10px;
-      &__title{
-        font-weight: bold;
-        align-self: center;
-      }
-      &__created_at{
-        font-size: 10pt;
-        margin-top: 15px;
       }
     }
   }
