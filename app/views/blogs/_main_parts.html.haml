@@ -1,13 +1,12 @@
 .blog
--#{data: {blog: {id: blog.id}}}
   .blog__header
     .blog__header__info
       .blog__header__info__title
-        -# = blog.title
+        = @blog.title
       .blog__header__info__created_at
-        -# = blog.created_at.strftime("%Y/%m/%d %H:%M")
+        = @blog.created_at.strftime("%Y/%m/%d %H:%M")
     .blog__header__edit
       Edit
   .blog__contents
     .blog__contents__text
-      -# = blog.content
+      = @blog.content
