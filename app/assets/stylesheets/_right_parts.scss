@@ -47,27 +47,30 @@
       }
     }
   }
-  &__form{
+  .form{
     height: 120px;
     background-color: $shirosumire;
     border-bottom-color: #eeee;
     padding: 10px;
     display: flex;
-    &__input_box{
-      width: 100%;
-      padding :10px;
-      background-color: $unohana;
-    }
-    &__submit{
-      height: 100%;
-      padding:0 10px;
-      margin-left: 10px;
-      background-color: $konpeki;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      color: white;
-      font-size: 12pt;
-    }
+    align-items: center;
+      .input{
+        .input-message{
+          width: 100%;
+          padding :10px;
+          background-color: $unohana;
+          
+        }
+        .submit{
+          height: 100%;
+          padding:0 10px;
+          margin-left: 10px;
+          background-color: $konpeki;
+          align-items: center;
+          font-weight: bold;
+          color: white;
+          font-size: 12pt;
+        }
+      }
   }
 }

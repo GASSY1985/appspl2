@@ -22,7 +22,8 @@
       .chat__messages__message2__text
         I think so!
 
-  .chat__form
-    .chat__form__input_box
-    .chat__form__submit
-      Send
+  .form
+    = form_with model: @chats, local: true do |f|
+      .input
+        = f.text_area :content, class: 'input-message', placeholder: "input message"
+      =f.submit 'SEND', class: 'submit'
