@@ -2,22 +2,11 @@
   .blog__header
     .blog__header__info
       .blog__header__info__title
-        令和2年の抱負
+        = @blog.title
       .blog__header__info__created_at
-        2020/1/9
+        = @blog.created_at.strftime("%Y/%m/%d %H:%M")
     .blog__header__edit
       Edit
   .blog__contents
     .blog__contents__text
-      【目標】
-      %br
-        ・1月中にブログアプリをひとつ完成させる
-      %br
-        ・2月からは最終課題を頑張る
-      %br
-        ・卒業後も月にひとつアプリを開発する
-      %br
-        ・会社が副業OKになったら業務委託でバイト的にSEの仕事もやってみる
-      %br
-        ・令和3年からフリーランス活動開始
-    
+      = @blog.content

@@ -67,8 +67,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'fog-aws'
+gem 'seed-fu', '~> 2.3'
 
-gem 'bootstrap-sass'
 gem 'jquery-slick-rails' #slickjs
 gem 'dropzonejs-rails' #dropzone.js
 
