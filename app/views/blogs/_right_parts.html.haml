@@ -21,9 +21,9 @@
           send at 1/10
       .chat__messages__message2__text
         I think so!
-
-  .form
-    = form_with model: @chats, local: true do |f|
-      .input
-        = f.text_area :content, class: 'input-message', placeholder: "input message"
-      =f.submit 'SEND', class: 'submit'
+  .input-message
+    .form
+      = form_with model: @chats, local: true do |f|
+        .input
+          = f.text_area :content, class: 'input-message', placeholder: "input message"
+        =f.submit 'SEND', class: 'submit'
