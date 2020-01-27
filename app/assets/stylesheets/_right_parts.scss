@@ -28,24 +28,6 @@
         font-size: 10pt;
       }
     }
-    &__message2{
-      width: 100%;
-      padding:15px 10px;
-      &__user-info{
-        display: flex;
-        &__name{
-
-        }
-        &__created_at{
-          font-size: 9pt;
-          margin-left: 10px;       
-        }
-      }
-      &__text{
-        padding: 5px 0 0 10px;
-        font-size: 10pt;
-      }
-    }
   }
   .input-message{
     height: 120px;
@@ -55,12 +37,10 @@
     display: flex;
     .form{
       height: 100%;
-      display: flex;
       width: 100%;
-      .input{
+      align-content: center;
+      .message{
         width: 100%;
-        float: left;
-        display: flex;
         height: 100%;
         .input-message{
           height: 100%;
@@ -74,11 +54,9 @@
         padding:0 10px;
         margin-left: 10px;
         background-color: $konpeki;
-        align-items: center;
         font-weight: bold;
         color: white;
         font-size: 12pt;
-        display: flex;
       }
     }
   }

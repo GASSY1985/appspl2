@@ -1,0 +1,14 @@
+.chat
+  .chat__messages
+    .chat__messages__message
+      .chat__messages__message__user-info
+        .chat__messages__message__user-info__name
+        .chat__messages__message__user-info__created_at
+      .chat__messages__message__text
+
+  .input-message
+    .form
+      = form_with model: @chats, local: true do |f|
+        .message
+          = f.text_area :message, class: 'input-message', placeholder: "input message"
+        =f.submit 'SEND', class: 'submit'
