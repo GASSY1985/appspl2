@@ -1,9 +1,5 @@
 class ChatsController < ApplicationController
 
-  def new
-    @chat = Chat.new
-  end
-
   def create
     @chat = Chat.new(create_params)
     if @chat.save!
@@ -15,7 +11,7 @@ class ChatsController < ApplicationController
 
   private
   def create_params
-    params.require(:chat).permit(:message).merge(blog_id: current_user.blogs.id)
+    params.require(:chat).permit(:message).merge(:blog_id)
   end
 
 end
