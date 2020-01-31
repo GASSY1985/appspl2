@@ -12,7 +12,7 @@
 
   .input-message
     .form
-      = form_with model:[@blog, @chat], local: true do |f|
+      = form_with model:[@blog, @chat], id: :new_message, local: true do |f|
         .message
           = f.text_area :message, class: 'input-message', placeholder: "input message"
         =f.submit 'SEND', class: 'submit'

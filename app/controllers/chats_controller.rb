@@ -10,7 +10,10 @@ class ChatsController < ApplicationController
   def create
     @chat = Chat.new(create_params)
     if @chat.save!
-        redirect_to blog_path(@chat.blog_id)
+        respond_to do |format|
+          format.html { redirect_to blog_path(@chat.blog_id)}
+          format.json
+        end
         # controller: :blogs, action: :show tice: "投稿完了しました"        
       else
         render :index
