@@ -18,6 +18,8 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+    @chat = Chat.new
+
     # chatの繋ぎ方（includes chats? no method error出た）
   end
 

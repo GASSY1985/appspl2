@@ -4,31 +4,32 @@
   float: left;
   background-color: $shirosumire;
   color: $youkan;
-  &__messages{
-    height: calc(100vh - 145px);
-    border-bottom-color: #eeee;
-    margin: 10px 10px 10px 10px;
-    background-color: $unohana;
-    overflow: scroll;
-    &__message{
-      width: 100%;
-      padding:15px 10px;
-      &__user-info{
-        display: flex;
-        &__name{
-
+    &__messages{
+      height: calc(100vh - 145px);
+      border-bottom-color: #eeee;
+      margin: 10px 10px 10px 10px;
+      background-color: $unohana;
+      overflow: scroll;
+      &__message{
+        width: 100%;
+        padding:15px 20px;
+        &__user-info{
+          display: flex;
+          &__name{
+            font-weight: bold;
+          }
+          &__created_at{
+            font-size: 9pt;
+            margin-left: 20px;
+            color:gray
+          }
         }
-        &__created_at{
-          font-size: 9pt;
-          margin-left: 10px;       
+        &__text{
+          padding: 10px 0 0 10px;
+          font-size: 10pt;
         }
-      }
-      &__text{
-        padding: 5px 0 0 10px;
-        font-size: 10pt;
       }
     }
-  }
   .input-message{
     height: 120px;
     background-color: $shirosumire;
