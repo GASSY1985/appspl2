@@ -1,0 +1,18 @@
+.chat
+  .chat__messages
+    - @blog.chats.each do |chat|
+      .chat__messages__message
+        .chat__messages__message__user-info
+          .chat__messages__message__user-info__name
+            = chat.user_name
+          .chat__messages__message__user-info__created_at
+            = chat.created_at.strftime("%Y/%m/%d %H:%M")
+        .chat__messages__message__text
+          = simple_format(chat.message)
+
+  .input-message
+    .form
+      = form_with model:[@blog, @chat], local: true do |f|
+        .message
+          = f.text_area :message, class: 'input-message', placeholder: "input message"
+        =f.submit 'SEND', class: 'submit'
